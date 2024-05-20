@@ -1,0 +1,38 @@
+/** _30.css */
+:root {
+  --bh-loading-width: 100%;
+  --bh-loading-height: 1.5rem;
+  --loaded: 0%;
+  --loaded-color: rgba(75, 195, 231, 0.63);
+}
+.container {
+  width: 70vw;
+  height: 50vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(217, 217, 219);
+  outline: 20px solid rgba(217, 217, 219);
+}
+.outter {
+  width: var(--bh-loading-width);
+  height: var(--bh-loading-height);
+  position: relative;
+  box-shadow: 0px 0px 10px 3px #fff;
+  --loaded: 50%;
+}
+.outter .inner {
+  position: absolute;
+  inset: 0.3rem;
+  background: transparent;
+}
+.outter .inner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--loaded);
+  height: 100%;
+  background: var(--loaded-color);
+}

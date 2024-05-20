@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(200deg, #537895, #09203f);
+}
+.loader {
+    position: relative;
+    color: #fff;
+    width: 96px;
+    height: 68px;
+}
+.loader div {
+    background-color: currentColor;
+}
+/*loader下的第一个div(小球)*/
+.loader div:nth-child(1) {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    bottom: 32%;
+    left: 20px;
+    border-radius: 50%;
+    transform-origin: center bottom;
+    animation: ball-jump 0.6s ease-in-out infinite;
+}
+/*loader下的非第一个其他三个div(楼梯)*/
+.loader div:not(:nth-child(1)){
+    width: 32px;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(60%);
+    animation: stairs 1.8s linear infinite;
+}
+/*为每一阶梯设置不同的延迟*/
+.loader div:nth-child(2) {
+    animation-delay: 0s;
+}
+.loader div:nth-child(3) {
+     animation-delay: -0.6s;
+}
+.loader div:nth-child(4) {
+      animation-delay: -1.2s;
+}
+
+/*定义动画*/
+/*小球弹跳动画*/
+@keyframes ball-jump {
+    0% {
+        transform: scale(1, 0.7);
+    }
+    20% {
+        transform: scale(0.7, 1.2);
+    }
+    40% {
+        transform: scale(1, 1);
+    }
+    50% {
+        bottom: 150%;
+        transform: scale(1, 1);
+    }
+    80%, 90% {
+        transform: scale(0.7, 1.2);
+    }
+    100% {
+        transform: scale(1, 0.7);
+    }
+}
+/*楼梯动画*/
+@keyframes stairs {
+    0% {
+        top: 0;
+        right: 0;
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        right: 100%;
+        opacity: 0;
+    }
+}

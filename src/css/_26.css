@@ -1,0 +1,79 @@
+html {
+  overflow: hidden;
+}
+
+body {
+  background: #000;
+}
+
+.ring-outer {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 6;
+  transform-style: preserve-3d;
+  perspective: 2000px;
+}
+
+.ring {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.ring img {
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -300px;
+  opacity: 0.2;
+  transition: 0.2s;
+  backface-visibility: hidden;
+}
+.ring img:hover {
+  opacity: 1;
+}
+.ring img:nth-child(1) {
+  transform: translate3d(464.7231720438px, 0, 885.4560256532px) rotateY(207.6923076923deg);
+}
+.ring img:nth-child(2) {
+  transform: translate3d(822.9838658937px, 0, 568.0647467312px) rotateY(235.3846153846deg);
+}
+.ring img:nth-child(3) {
+  transform: translate3d(992.7088740981px, 0, 120.5366802553px) rotateY(263.0769230769deg);
+}
+.ring img:nth-child(4) {
+  transform: translate3d(935.0162426854px, 0, -354.6048870425px) rotateY(290.7692307692deg);
+}
+.ring img:nth-child(5) {
+  transform: translate3d(663.1226582408px, 0, -748.5107481711px) rotateY(318.4615384615deg);
+}
+.ring img:nth-child(6) {
+  transform: translate3d(239.3156642876px, 0, -970.9418174261px) rotateY(346.1538461538deg);
+}
+.ring img:nth-child(7) {
+  transform: translate3d(-239.3156642876px, 0, -970.9418174261px) rotateY(373.8461538462deg);
+}
+.ring img:nth-child(8) {
+  transform: translate3d(-663.1226582408px, 0, -748.5107481711px) rotateY(401.5384615385deg);
+}
+.ring img:nth-child(9) {
+  transform: translate3d(-935.0162426854px, 0, -354.6048870425px) rotateY(429.2307692308deg);
+}
+.ring img:nth-child(10) {
+  transform: translate3d(-992.7088740981px, 0, 120.5366802553px) rotateY(456.9230769231deg);
+}
+.ring img:nth-child(11) {
+  transform: translate3d(-822.9838658937px, 0, 568.0647467312px) rotateY(484.6153846154deg);
+}
+.ring img:nth-child(12) {
+  transform: translate3d(-464.7231720438px, 0, 885.4560256532px) rotateY(512.3076923077deg);
+}
+.ring img:nth-child(13) {
+  transform: translate3d(0px, 0, 1000px) rotateY(540deg);
+}
+
+/*# sourceMappingURL=_26.css.map */

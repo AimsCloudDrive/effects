@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  display: flex;
+}
+#btn {
+  margin: 100px auto;
+  position: relative;
+  width: 100px;
+  height: 40px;
+}
+#btn:hover {
+  background-color: #333;
+}
+#tbn::before {
+  content: "toolTips";
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  color: white;
+  border-radius: 5px;
+  transform: translateY(-35px) translateX(-50%);
+}
+#btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  transform: translateY(-5px) translateY(25px) translateY(-35px) translateX(45px) rotate(45deg);
+}

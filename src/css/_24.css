@@ -1,0 +1,114 @@
+.container {
+    width: 400px;
+    height: 400px;
+    border: 1px crimson dashed;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.file {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.file-progress .progress {
+    height: 400px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    --progress: 0;
+}
+/*进度值*/
+.file-progress span{
+    margin: 10px 0;
+    font-size: 30px;
+    text-align: center;
+}
+/*进度条*/
+.file-progress .progress-outer {
+    width: 350px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.file-progress .progress-inner {
+    max-width: 350px;
+    width: calc(var(--progress) / 100 * 350px);
+    height: 10px;
+    border-radius: 5px;
+    background-color:  #00f;
+}
+/*预览图*/
+img.prev {
+    position: absolute;
+    max-height: 400px;
+    max-width: 400px;
+    opacity: 0.3;
+    z-index: -1;
+}
+.progressCancel {
+    /*background-color: #fff;*/
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+/*鼠标移入*/
+.progressCancelHover {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+.result {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+/*完成图*/
+img.finished {
+    position: absolute;
+    z-index: -1;
+    max-height: 400px;
+    max-width: 400px;
+}
+.resultCancel {
+    position: absolute;
+    top: -195px;
+    left: 200px;
+    transform: translateX(calc(-100% - 5px));
+}
+
+
+.avatar-uploader-icon {
+    transform: translateY(-23px);
+    font-size: 200px;
+    color: #8c939d;
+    width: 400px;
+    height: 400px;
+    line-height: 400px;
+    text-align: center;
+}
+
+.select .file-progress,
+.select .file-result {
+     display: none;
+}
+
+.progress .file-select,
+.progress .file-result {
+    display: none;
+}
+
+.result .file-progress,
+.result .file-select {
+    display: none;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="../assets/favicon.ico" />
+	<title>_7日月交替效果</title>
+	<link rel="stylesheet" href="../css/_7.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script>
+		change = function (str) {
+			<!-- 设置container元素的class属性值为str -->
+			document.getElementById('container').setAttribute('class',str);
+		}
+	</script>
+<!--	<script src="../js/_7.js" async="async"></script>-->
+</head>
+<body>
+	<div class="btn-box">
+		<div onclick="change('light')">
+			<i class="fa fa-sun-o" aria-hidden="true"></i>你叉叉
+		</div>
+		<div onclick="change('dark')" >
+			<i class="fa fa-moon-o" aria-hidden="true"></i>穷哈哈
+		</div>
+	</div>
+	<div class="dark" id="container">
+		<div class="bg"></div>
+		<div class="moon-box">
+			<div class="moon"></div>
+		</div>
+		<div class="sun-box">
+			<div class="sun"></div>
+		</div>
+		<div class="sea"></div>
+	</div>
+</body>
+</html>

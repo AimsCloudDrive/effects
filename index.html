@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html</title>
+    <script src="./src/js/vue.min.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <style></style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div>
+        <button v-for="item in NUMS" :class="clazz[item-1]" @click="cli(item)">
+          {{ item }}
+        </button>
+      </div>
+    </div>
+    <div class="webInfo">
+      <a href="https://beian.miit.gov.cn/" target="_blank"
+        >蜀ICP备2024052378号</a
+      >
+      | <a href="https://beian.miit.gov.cn/" target="_blank">1</a> |
+      <a href="https://any.aims.nevermonarch.cn:9443/" target="_blank"
+        >to Portainer</a
+      >
+      |
+      <a href="https://any.aims.nevermonarch.cn:9958/" target="_blank"
+        >Private Files</a
+      >
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

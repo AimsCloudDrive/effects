@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    display: flex;
+}
+@btnWidth: 100px;
+@btnHeight: 40px;
+@moveUpDist: 35px;
+@btnBeforeHeight: 20px;
+@btnAfterHeight: 10px;
+
+
+
+#btn {
+    margin: 100px auto;
+    position: relative;
+    width: @btnWidth;
+    height: @btnHeight;
+}
+button::before, button::after {
+    background-color: #333;
+    position: absolute;
+    top: 0;
+}
+button:hover::before {
+    content: "toolTips";
+    padding: 5px;
+    left: 50%;
+    color: white;
+    border-radius: 5px;
+    transform: translateY(-@moveUpDist) translateX(-50%);
+}
+button:hover::after {
+    content: "";
+    left: 0;
+    width: @btnAfterHeight;
+    height: @btnAfterHeight;
+    transform: translateY((-@btnAfterHeight / 2))
+    translateY(25px)
+    translateY(-@moveUpDist)
+    translateX((@btnWidth / 2 - @btnAfterHeight / 2))
+    rotate(45deg);
+}
+

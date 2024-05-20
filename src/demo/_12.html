@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../assets/favicon.ico" />
+    <title>表白背景</title>
+    <link rel="stylesheet" href="../css/_12.css">
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="love" v-for="item in nums" :style="{'--d':(item * -1) * 0.3}">
+        <div class="love-hor">
+            <div class="love-ver">
+                <div class="love-text">
+                    GirlFriendName
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+new Vue({
+    el: ".container",
+    data() {
+        return {
+            nums: 67
+        }
+    }
+})
+</script>
+</html>

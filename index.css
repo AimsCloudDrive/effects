@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f5f5f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    /* 将div置于页面中央 */
+    width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px #3eeeee solid;
+}
+.anniu {
+    display: inline-block;
+    min-width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    justify-content: center;
+    text-align: center;
+    margin: 0 10px;
+    font-size: 13px;
+}
+.can {
+    cursor: pointer;
+    border: 1px solid #333;
+}
+.cant {
+    border: 1px solid #f00;
+}
+
+.webInfo {
+    position: absolute;
+    margin-block-end: 1rem;
+    bottom: 0;
+}
+
+.webInfo a {
+    color: #00dfc4;
+    text-decoration: none;
+}
+.webInfo a:hover {
+    color: #00ff0a;
+    text-decoration: underline;
+}
+.webInfo a:visited {
+    color: #8c939d;
+}

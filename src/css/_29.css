@@ -1,0 +1,21 @@
+body {
+    display: flex;
+}
+
+.container {
+    margin: 60px auto;
+}
+
+.btn-hover {
+    width: 150px;
+    height: 60px;
+    background-color: #00f;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    filter: url(#noise);
+}
+.btn-hover:hover {
+    background-color: #00f7;
+}

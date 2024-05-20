@@ -1,0 +1,55 @@
+
+@use "sass:math";
+html {
+  overflow: hidden;
+}
+
+body {
+  background: #000;
+}
+
+.ring-outer {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 6;
+  transform-style: preserve-3d;
+  perspective: 2000px;
+}
+
+.ring {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  transform-style: preserve-3d;
+  img {
+    $imgWidth: 400px;
+    $imgHeight: 600px;
+    width: $imgWidth;
+    height: $imgHeight;
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+    margin-left: -$imgWidth / 2;
+    margin-top: -$imgHeight / 2;
+    opacity: 0.2;
+    transition: 0.2s;
+    &:hover {
+      opacity: 1;
+    }
+    $n: 13;
+    $pdeg: 360deg / $n;
+    $r: 1000px;
+    backface-visibility: hidden;
+    @for $i from 1 through $n {
+      &:nth-child(#{$i}) {
+        $d: $i * $pdeg;
+        $x: $r * math.sin($d);
+        $z: $r * math.cos($d);
+        transform: translate3d(#{ $x }, 0 , #{ $z }) rotateY(180deg + $d);
+
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+html {
+  overflow: hidden;
+}
+
+.container {
+  --n: 20;
+}
+
+.line {
+  display: flex;
+  margin-block-start: -0.8333333333vw;
+}
+.line:nth-child(2n) {
+  transform: translateX(-2.5vw);
+}
+
+.item {
+  width: 5vw;
+  height: 5vw;
+  flex-shrink: 0;
+  transition: 0.3s;
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 76%, 5% 26%);
+}
+
+.upper {
+  transform: scale(1.3);
+}
+
+.lower {
+  transform: scale(0.7);
+}
+
+/*# sourceMappingURL=_28.css.map */
