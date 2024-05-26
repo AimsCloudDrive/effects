@@ -157,7 +157,6 @@ class Graph {
     this.update();
     this.particles.forEach((p) => p.drawP());
     requestAnimationFrame((_) => this.draw());
-    console.log(this.particles.length);
   }
 }
 const g = new Graph();
