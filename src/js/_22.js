@@ -104,7 +104,7 @@ class Graph {
       cvs.height
     );
     const points = [];
-    const gap = 2;
+    const gap = 3;
     for (let i = 0; i < width; i += gap) {
       for (let j = 0; j < height; j += gap) {
         const index = (i + j * width) * 4;
@@ -130,7 +130,7 @@ class Graph {
     this.text = newText;
     ctx.fillStyle = "#000";
     ctx.textBaseline = "middle";
-    ctx.font = `${200 * devicePixelRatio}px DS-Digital, sans-serif`; //
+    ctx.font = `${200 * devicePixelRatio}px common-number, sans-serif`; //
     ctx.fillText(
       this.text,
       (width - ctx.measureText(this.text).width) / 2,
